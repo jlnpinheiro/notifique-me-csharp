@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.2</TargetFramework>
+    <RootNamespace>JNogueira.Infraestrutura.NotifiqueMe</RootNamespace>
+    <AssemblyName>JNogueira.Infraestrutura.NotifiqueMe</AssemblyName>
+    <Authors>Jorge Nogueira</Authors>
+    <Product>Notifique Me!</Product>
+    <Description>Projeto que permite a utilização de maneira simples do pattern "Domain notifications".</Description>
+    <PackageProjectUrl>https://github.com/jlnpinheiro/notifique-me-csharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jlnpinheiro/notifique-me-csharp</RepositoryUrl>
+    <PackageTags>notifications patterns, notificações de domínio; domain notifications</PackageTags>
+  </PropertyGroup>
+
+</Project>
