@@ -131,8 +131,9 @@ Que tal então, reusar essas validações comuns, assim:
         ...
     }
 ```
-No exemplo acima, caso o parâmetro *nome* seja nulo ou vazio, uma notificação é criada! Tchau *if*!
-A classe **Noitificavel** possui vários [*extension methods*](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/extension-methods), trazendo vários tipos de validações comumente utilizados.
+No exemplo acima, caso o parâmetro *"nome"* seja nulo ou vazio, uma notificação é criada! Tchau *if*!
+
+A classe **Noitificavel** possui vários [*extension methods*](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/extension-methods), trazendo vários tipos de validações comumente utilizadas.
 ```csharp
 this.NotificarSePossuirTamanhoSuperiorA("abc", 2, "A string 'abc' tem tamanho superior a 2.");
 ```
