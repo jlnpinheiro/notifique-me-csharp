@@ -25,7 +25,7 @@ Você pode validar suas classes de várias maneiras utilizando notificações. V
 ### Sua classe "notificável"
 Para que sua classe se torne "notificável", basta que herdar da classe **Notificavel** (namespace *JNogueira.Infraestrutura.NotifiqueMe*)
 
-```
+```csharp
 using JNogueira.Infraestrutura.NotifiqueMe;
 
 namespace Notificacoes.Testes
