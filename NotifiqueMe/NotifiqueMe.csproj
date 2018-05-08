@@ -11,7 +11,7 @@ Esse projeto é altamente baseado no projeto Flunt (https://github.com/andrebalt
     <PackageProjectUrl>https://github.com/jlnpinheiro/notifique-me-csharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/jlnpinheiro/notifique-me-csharp</RepositoryUrl>
     <PackageTags>notifications patterns, notificações de domínio; domain notifications; flunt;</PackageTags>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageId>NotifiqueMe</PackageId>
   </PropertyGroup>
 
