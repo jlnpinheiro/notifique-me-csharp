@@ -51,13 +51,23 @@ namespace StarWars
             if (string.IsNullOrEmpty(nome))
                 this.AdicionarNotificacao("Informe seu nome, guerreiro!");
 
-            if (anosExperiencia >= 1 && anosExperiencia <=5)
+            if (anosExperiencia >= 1 && anosExperiencia <= 5)
                 this.AdicionarNotificacao("Você ainda é um padawan. Finalize seu treinamento!", Dictionary<string, string> { { "Experiência", anosExperiencia.ToString() }, { "Data atual", DateTime.Today.ToShortTimeString() } });
         }
     }
 }
 ```
+### Tá válido?
+Toda classe **notificável** possui a propriedade **Invalido**. Existindo pelo menos uma notificação, sua classe é considerada inválida!
 
+```csharp
+var jedi1 = new Jedi("Anakin Skywalker", 1);
+
+if (jed1.Invalido)
+{
+    // Ops, temos notificações aqui padawan!
+}
+```
 
 ## Dependências
 .NET Standard 1.2+
