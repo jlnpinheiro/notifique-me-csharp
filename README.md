@@ -4,7 +4,7 @@ Projeto que permite a utilização de maneira simples do pattern "Domain notific
 Esse projeto é altamente baseado no projeto **Flunt** (https://github.com/andrebaltieri/flunt). Porém a necessidade de utilizar o projeto em uma versão do .NET Standard inferior a versão 1.3 e a necessidade de traduzir para o português-BR, motivou a criação desse projeto.
 
 ## Notificando...
-Você já precisou realizar algumas validações no seu código e com elas adicionou uma grande quantidade de *"ifs"*, disparando também algumas exceptions sem necessidade?
+Você já precisou realizar algumas validações no seu código e com elas adicionou uma grande quantidade de *"ifs"*, disparando também  *exceptions* sem necessidade?
 
 ```csharp
 if (cont == 0)
@@ -18,7 +18,7 @@ if (idade < 18)
 if (!ValidaCpf("172.222.479-1a"))
     throw new Exception("CPF inválido.");
 ```
-Cada *"if"* pode trazer uma maior complexidade no entendimento do seu código. Além disso várias dessas validações podem ocorrer por mais de uma vez. Por que não então, substituir todas essas validações e seus *ifs* e *exceptions* desnecessários, por métodos de validações reuzáveis e **notificações**?
+Cada *"if"* pode trazer uma maior complexidade no entendimento do seu código. Além disso várias dessas validações podem ocorrer por mais de uma vez. Então, por que não, substituir todas essas validações e seus *ifs* e *exceptions* desnecessários, por métodos de validações reuzáveis, testáveis e **notificar** caso algo esteja errado?
 
 Conheci esse "pattern" pelos treinamentos do [André Baltieri](https://github.com/andrebaltieri) , no site Balta.IO (http://balta.io/) e confesso que depois disso, uso *ifs* com muito mais sabedoria e deixo as *exceptions* para os imprevistos do dia a dia...
 
