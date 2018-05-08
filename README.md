@@ -65,7 +65,48 @@ var jedi1 = new Jedi("Anakin Skywalker", 1);
 
 if (jed1.Invalido)
 {
-    // Ops, temos notificações aqui padawan!
+    // Eita! Temos notificações aqui, padawan!
+}
+```
+
+### Exibindo as notificações
+Você tem acesso a todas as notificações da classe através da propriedade **Notificacoes**.
+
+```csharp
+var jedi1 = new Jedi("Anakin Skywalker", 1);
+
+if (jed1.Invalido)
+{
+    foreach (var notificacao in customer.Notificacoes)
+    {
+        Console.WriteLine($"{notificacao.Mensagem}");
+    }
+}
+```
+
+### Agrupando as notificações
+Supondo que você possua mais de uma classe notificável, é possível agrupar notificações de outras classes notificáveis, através do método **AdicionarNotificacoes**. 
+
+```csharp
+class Program : Notificavel
+{
+    void Main(string[] args)
+    {
+        var jedi1 = new Jedi("Anakin Skywalker", 1);
+        var jedi2 = new Jedi("Rey", 2);
+
+        AdicionarNotificacoes(jedi1, jedi2);
+        
+        if (this.Invalido)
+        {
+            foreach (var notificacao in this.Notificacoes)
+            {
+                Console.WriteLine($"{notificacao.Mensagem}");
+            }
+        }
+
+        Console.WriteLine("Hello World!");
+    }
 }
 ```
 
