@@ -18,23 +18,19 @@ if (idade < 18)
 if (!ValidaCpf("172.222.479-1a"))
     throw new Exception("CPF inválido.");
 ```
-Cada *"if"* pode trazer uma maior complexidade no entendimento do seu código. Além disso várias dessas validações podem ocorrer por mais de uma vez. Então, por que não, substituir todas essas validações e seus *ifs* e *exceptions* desnecessários, por métodos de validações reuzáveis, testáveis e **notificar** caso algo esteja errado?
+Cada *"if"* pode trazer complexidade no entendimento do seu código. Além disso várias dessas validações podem ocorrer por mais de uma vez. Então, por que não, substituir todas essas validações e seus *ifs* e *exceptions* desnecessários, por métodos de validações reuzáveis, testáveis e **notificar** caso algo esteja errado?
 
-Conheci esse "pattern" pelos treinamentos do [André Baltieri](https://github.com/andrebaltieri) , no site Balta.IO (http://balta.io/) e confesso que depois disso, uso *ifs* com muito mais sabedoria e deixo as *exceptions* para os imprevistos do dia a dia...
+Conheci esse "pattern" pelos treinamentos do [André Baltieri](https://github.com/andrebaltieri) , no site Balta.IO (http://balta.io/) e confesso que depois disso, uso *if* com muito mais sabedoria e deixo as *exceptions* para os imprevistos do dia a dia...
 
 ### Sua classe "notificável"
 Para que sua classe se torne "notificável", basta herdar da classe **Notificavel** (namespace *JNogueira.Infraestrutura.NotifiqueMe*)
 
 ```csharp
-public class Jedi : Notificavel
+namespace StarWars
 {
-    public Jedi(string nome, int anosExperiencia)
+    public class Jedi : Notificavel
     {
-        if (string.IsNullOrEmpty(nome))
-            this.AdicionarNotificacao("Informe seu nome, guerreiro!");
-        
-        if (anosExperiencia >= 1 && anosExperiencia <=5)
-            this.AdicionarNotificacao("Você ainda é um padawan. Finalize seu treinamento!", Dictionary<string, string> { { "Experiência", anosExperiencia.ToString() }, { "Data atual", DateTime.Today.ToShortTimeString() } });
+       
     }
 }
 ```
@@ -46,12 +42,18 @@ Herdando da classe **Notificavel**, você poderá utilizar os métodos **Adicion
 ```csharp
 using JNogueira.Infraestrutura.NotifiqueMe;
 
-namespace Notificacoes.Testes
+namespace StarWars
 {
-    public Customer(string firstName, string lastName)
+    public class Jedi : Notificavel
     {
-        if (firstName != "Bruce" && lastName != "Wayne")
-            AddNotification("Name", "You're not Batman!");
+        public Jedi(string nome, int anosExperiencia)
+        {
+            if (string.IsNullOrEmpty(nome))
+                this.AdicionarNotificacao("Informe seu nome, guerreiro!");
+
+            if (anosExperiencia >= 1 && anosExperiencia <=5)
+                this.AdicionarNotificacao("Você ainda é um padawan. Finalize seu treinamento!", Dictionary<string, string> { { "Experiência", anosExperiencia.ToString() }, { "Data atual", DateTime.Today.ToShortTimeString() } });
+        }
     }
 }
 ```
