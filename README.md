@@ -143,7 +143,7 @@ this.NotificarSeEmailInvalido("email@invalido", "O e-mail é inválido.");
 ```csharp
 this.NotificarSeMaiorOuIgualA(3, 2, "O valor 3 é maior ou igual ao valor 2.");
 ```
-A lista de validações disponíveis está disponível em https://github.com/jlnpinheiro/notifique-me-csharp/tree/master/NotifiqueMe/Validacoes. Deixa já aquele seu *pull request* para contribuir!
+A lista de validações está disponível em https://github.com/jlnpinheiro/notifique-me-csharp/tree/master/NotifiqueMe/Validacoes. Deixa já aquele seu *pull request* para contribuir!
 
 ## Dependências
 .NET Standard 1.2+
