@@ -111,7 +111,7 @@ class Program : Notificavel
 ```
 
 ### Reusando validações...
-Por várias vezes você precisou validar uma *string* para se certificar que ela não fosse nula ou vazia, certo? Recuperando nosso exemplo...
+Por várias vezes você precisou validar uma *string* para se certificar que ela não fosse nula ou vazia, certo ...? 
 ```csharp
 ...
     public Jedi(string nome, int anosExperiencia)
@@ -121,17 +121,27 @@ Por várias vezes você precisou validar uma *string* para se certificar que ela
         ...
     }
 ```
-No exemplo, validamos apenas uma *string*, porém e se fossem várias? Você iria copiar e colar por várias vezes o bloco *if (string.IsNullOrEmpty(...))*, certo? Errado! Que tal então, reusar essas validações comuns, assim:
+No exemplo, validamos apenas uma *string*, porém e se fossem várias? Você iria copiar e colar por várias vezes o bloco *"if (string.IsNullOrEmpty(...))"*, certo? Errado! 
+Que tal então, reusar essas validações comuns, assim:
 ```csharp
 ...
     public Jedi(string nome, int anosExperiencia)
     {
-        if (string.IsNullOrEmpty(nome))
-            this.AdicionarNotificacao("Informe seu nome, guerreiro!");
+        this.NotificarSeNuloOuVazio(nome, "Informe seu nome, guerreiro!");
         ...
     }
 ```
-
+No exemplo acima, caso o parâmetro *nome* seja nulo ou vazio, uma notificação é criada! Tchau *if*!
+A classe **Noitificavel** possui vários [*extension methods*](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/extension-methods), trazendo vários tipos de validações comumente utilizados.
+```csharp
+this.NotificarSePossuirTamanhoSuperiorA("abc", 2, "A string 'abc' tem tamanho superior a 2.");
+```
+```csharp
+this.NotificarSeEmailInvalido("email@invalido", "O e-mail é inválido.");
+```
+```csharp
+this.NotificarSeMaiorOuIgualA(3, 2, "O valor 3 é maior ou igual ao valor 2.");
+```
 
 ## Dependências
 .NET Standard 1.2+
