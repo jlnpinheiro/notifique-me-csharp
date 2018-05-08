@@ -20,4 +20,19 @@ dotnet add package NotifiqueMe
 ```
 
 ## Notificando...
-Em breve.
+Você pode validar suas classes de várias maneiras utilizando notificações. Veja abaixa, alguns exemplos:
+
+### Sua classe "notificável"
+Para que sua classe se torne "notificável", basta que herdar da classe **Notificavel** (namespace *JNogueira.Infraestrutura.NotifiqueMe*)
+
+```
+using JNogueira.Infraestrutura.NotifiqueMe;
+
+namespace Notificacoes.Testes
+{
+    public class Classe1 : Notificavel
+    {
+
+    }
+}
+```
