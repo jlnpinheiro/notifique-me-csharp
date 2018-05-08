@@ -9,7 +9,15 @@ Esse projeto é altamente baseado no projeto **Flunt** (https://github.com/andre
 Informações sobre versões suportadas em https://docs.microsoft.com/pt-br/dotnet/standard/net-standard
 
 ## Instalação
-Em breve.
+
+### NuGet
+```
+Install-Package NotifiqueMe
+```
+### .NET CLI
+```
+dotnet add package NotifiqueMe
+```
 
 ## Notificando...
 Em breve.
