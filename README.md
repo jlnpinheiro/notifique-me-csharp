@@ -3,7 +3,7 @@ Projeto que permite a utilização de maneira simples do pattern "Domain notific
 
 Esse projeto é altamente baseado no projeto **Flunt** (https://github.com/andrebaltieri/flunt). Porém a necessidade de utilizar o projeto em uma versão do .NET Standard inferior a versão 1.3 e a necessidade de traduzir para o português-BR, motivou a criação desse projeto.
 
-## Notificando...
+## O que é isso?
 Você já precisou realizar algumas validações no seu código e com elas adicionou uma grande quantidade de *"ifs"*, disparando também  *exceptions* sem necessidade?
 
 ```csharp
@@ -22,6 +22,41 @@ Cada *"if"* pode trazer uma maior complexidade no entendimento do seu código. A
 
 Conheci esse "pattern" pelos treinamentos do [André Baltieri](https://github.com/andrebaltieri) , no site Balta.IO (http://balta.io/) e confesso que depois disso, uso *ifs* com muito mais sabedoria e deixo as *exceptions* para os imprevistos do dia a dia...
 
+### Sua classe "notificável"
+Para que sua classe se torne "notificável", basta herdar da classe **Notificavel** (namespace *JNogueira.Infraestrutura.NotifiqueMe*)
+
+```csharp
+public class Jedi : Notificavel
+{
+    public Jedi(string nome, int anosExperiencia)
+    {
+        if (string.IsNullOrEmpty(nome))
+            this.AdicionarNotificacao("Informe seu nome, guerreiro!");
+        
+        if (anosExperiencia >= 1 && anosExperiencia <=5)
+            this.AdicionarNotificacao("Você ainda é um padawan. Finalize seu treinamento!", Dictionary<string, string> { { "Experiência", anosExperiencia.ToString() }, { "Data atual", DateTime.Today.ToShortTimeString() } });
+    }
+}
+```
+Pronto, sua classe já está preparada para utilizar notificações
+
+### Adicionando uma notificação
+Herdando da classe **Notificavel**, você poderá utilizar os métodos **AdicionarNotificacao** ou **AdicionarNotificacoes** para adicionar notificações!
+
+```csharp
+using JNogueira.Infraestrutura.NotifiqueMe;
+
+namespace Notificacoes.Testes
+{
+    public Customer(string firstName, string lastName)
+    {
+        if (firstName != "Bruce" && lastName != "Wayne")
+            AddNotification("Name", "You're not Batman!");
+    }
+}
+```
+
+
 ## Dependências
 .NET Standard 1.2+
 
@@ -37,23 +72,3 @@ Install-Package NotifiqueMe
 ```
 dotnet add package NotifiqueMe
 ```
-
-
-
-
-
-### Sua classe "notificável"
-Para que sua classe se torne "notificável", basta que herdar da classe **Notificavel** (namespace *JNogueira.Infraestrutura.NotifiqueMe*)
-
-```csharp
-using JNogueira.Infraestrutura.NotifiqueMe;
-
-namespace Notificacoes.Testes
-{
-    public class Classe1 : Notificavel
-    {
-
-    }
-}
-```
-Pronto, sua classe já está preparada para utilizar notificações
