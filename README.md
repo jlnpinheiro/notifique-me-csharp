@@ -18,7 +18,7 @@ if (idade < 18)
 if (!ValidaCpf("172.222.479-1a"))
     throw new Exception("CPF inválido.");
 ```
-Cada *"if"* pode trazer complexidade no entendimento do seu código. Além disso várias dessas validações podem ocorrer por mais de uma vez. Então, por que não, substituir todas essas validações e seus *ifs* e *exceptions* desnecessários, por métodos de validações reuzáveis, testáveis e **notificar** caso algo esteja errado?
+Cada *"if"* pode trazer complexidade no entendimento do seu código. Além disso várias dessas validações podem ocorrer por mais de uma vez. Então, por que não, substituir todas essas validações e seus *ifs* e *exceptions* desnecessários, por métodos de validações reusáveis, testáveis e **notificar** caso algo esteja errado?
 
 Conheci esse "pattern" pelos treinamentos do [André Baltieri](https://github.com/andrebaltieri) , no site Balta.IO (http://balta.io/) e confesso que depois disso, uso *if* com muito mais sabedoria e deixo as *exceptions* para os imprevistos do dia a dia...
 
@@ -109,6 +109,29 @@ class Program : Notificavel
     }
 }
 ```
+
+### Reusando validações...
+Por várias vezes você precisou validar uma *string* para se certificar que ela não fosse nula ou vazia, certo? Recuperando nosso exemplo...
+```csharp
+...
+    public Jedi(string nome, int anosExperiencia)
+    {
+        if (string.IsNullOrEmpty(nome))
+            this.AdicionarNotificacao("Informe seu nome, guerreiro!");
+        ...
+    }
+```
+No exemplo, validamos apenas uma *string*, porém e se fossem várias? Você iria copiar e colar por várias vezes o bloco *if (string.IsNullOrEmpty(...))*, certo? Errado! Que tal então, reusar essas validações comuns, assim:
+```csharp
+...
+    public Jedi(string nome, int anosExperiencia)
+    {
+        if (string.IsNullOrEmpty(nome))
+            this.AdicionarNotificacao("Informe seu nome, guerreiro!");
+        ...
+    }
+```
+
 
 ## Dependências
 .NET Standard 1.2+
