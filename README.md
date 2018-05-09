@@ -26,6 +26,8 @@ Conheci esse "pattern" pelos treinamentos do [André Baltieri](https://github.co
 Para que sua classe se torne "notificável", basta herdar da classe **Notificavel** (namespace *JNogueira.Infraestrutura.NotifiqueMe*)
 
 ```csharp
+using JNogueira.Infraestrutura.NotifiqueMe;
+
 namespace StarWars
 {
     public class Jedi : Notificavel
@@ -77,7 +79,7 @@ var jedi1 = new Jedi("Anakin Skywalker", 1);
 
 if (jed1.Invalido)
 {
-    foreach (var notificacao in customer.Notificacoes)
+    foreach (var notificacao in jedi1.Notificacoes)
     {
         Console.WriteLine($"{notificacao.Mensagem}");
     }
