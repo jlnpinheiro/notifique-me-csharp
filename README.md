@@ -36,10 +36,10 @@ namespace StarWars
     }
 }
 ```
-Pronto, sua classe já está preparada para utilizar notificações
+Pronto, sua classe já está preparada para utilizar notificações!
 
 ### Adicionando uma notificação
-Herdando da classe **Notificavel**, você poderá utilizar os métodos **AdicionarNotificacao** ou **AdicionarNotificacoes** para adicionar notificações!
+Ao herdar da classe **Notificavel**, você poderá utilizar os métodos **AdicionarNotificacao** e **AdicionarNotificacoes** para adicionar notificações.
 
 ```csharp
 using JNogueira.Infraestrutura.NotifiqueMe;
@@ -59,7 +59,7 @@ namespace StarWars
     }
 }
 ```
-### Tá válido?
+### É inválido?
 Toda classe **notificável** possui a propriedade **Invalido**. Existindo pelo menos uma notificação, sua classe é considerada inválida!
 
 ```csharp
@@ -87,7 +87,7 @@ if (jed1.Invalido)
 ```
 
 ### Agrupando as notificações
-Supondo que você possua mais de uma classe notificável, é possível agrupar notificações de outras classes notificáveis, através do método **AdicionarNotificacoes**. 
+Caso você possua mais de uma classe notificável, é possível agrupar notificações de outras classes notificáveis, através do método **AdicionarNotificacoes**. 
 
 ```csharp
 class Program : Notificavel
@@ -98,22 +98,12 @@ class Program : Notificavel
         var jedi2 = new Jedi("Rey", 2);
 
         AdicionarNotificacoes(jedi1, jedi2);
-        
-        if (this.Invalido)
-        {
-            foreach (var notificacao in this.Notificacoes)
-            {
-                Console.WriteLine($"{notificacao.Mensagem}");
-            }
-        }
-
-        Console.WriteLine("Hello World!");
     }
 }
 ```
 
 ### Reusando validações...
-Por várias vezes você precisou validar uma *string* para se certificar que ela não fosse nula ou vazia, certo ...? 
+Por várias vezes você precisou validar, por exemplo, uma *string* para se certificar de que ela não fosse nula ou vazia, certo? 
 ```csharp
 ...
     public Jedi(string nome, int anosExperiencia)
@@ -123,19 +113,23 @@ Por várias vezes você precisou validar uma *string* para se certificar que ela
         ...
     }
 ```
-No exemplo, validamos apenas uma *string*, porém e se fossem várias? Você iria copiar e colar por várias vezes o bloco *"if (string.IsNullOrEmpty(...))"*, certo? Errado! 
-Que tal então, reusar essas validações comuns, assim:
+No exemplo acima, validamos apenas o parâmetro *"nome"*, porém e se fosse necessário realizar várias outras validações? Você iria fazer um CTRL+C e CTRL+V por várias vezes na linha *"if (string.IsNullOrEmpty(...))"*, certo...? 
+
+Errado! Porque não, reusar essas validações comuns:
 ```csharp
 ...
     public Jedi(string nome, int anosExperiencia)
     {
+        // if (string.IsNullOrEmpty(nome))
+        //     this.AdicionarNotificacao("Informe seu nome, guerreiro!");
+        
         this.NotificarSeNuloOuVazio(nome, "Informe seu nome, guerreiro!");
         ...
     }
 ```
-No exemplo acima, caso o parâmetro *"nome"* seja nulo ou vazio, uma notificação é criada! Tchau *if*!
+No exemplo acima, caso o parâmetro *"nome"* **seja nulo ou vazio**, uma notificação é criada! Resumindo: tchau pra mais um *if*!
 
-A classe **Noitificavel** possui vários [*extension methods*](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/extension-methods), trazendo vários tipos de validações comumente utilizadas.
+A classe **Noitificavel** utiliza [*extension methods*](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/extension-methods), trazendo vários tipos de validações comumente utilizadas. Veja alguns exemplos:
 ```csharp
 this.NotificarSePossuirTamanhoSuperiorA("abc", 2, "A string 'abc' tem tamanho superior a 2.");
 ```
@@ -145,7 +139,7 @@ this.NotificarSeEmailInvalido("email@invalido", "O e-mail é inválido.");
 ```csharp
 this.NotificarSeMaiorOuIgualA(3, 2, "O valor 3 é maior ou igual ao valor 2.");
 ```
-A lista de validações está disponível em https://github.com/jlnpinheiro/notifique-me-csharp/tree/master/NotifiqueMe/Validacoes. Deixa já aquele seu *pull request* para contribuir!
+A lista de validações está disponível em https://github.com/jlnpinheiro/notifique-me-csharp/tree/master/NotifiqueMe/Validacoes. Deixe já aquele seu *pull request* para contribuir!
 
 ## Dependências
 .NET Standard 1.2+
