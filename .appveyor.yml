@@ -18,6 +18,9 @@ before_build:
 build:
   project: NotifiqueMe.sln
   publish_nuget: true 
+after_build:
+  - echo %APPVEYOR_BUILD_FOLDER%
+  - 7z a NotifiqueMe.zip %APPVEYOR_BUILD_FOLDER%\*
 build_script:
   - cmd: dotnet build
   - cmd: dotnet pack
@@ -25,25 +28,30 @@ test_script:
   - cmd: dotnet restore
   - cmd: cd NotifiqueMe.Tests
   - cmd: dotnet test
+artifacts:
+  - path: '**\*.nupkg'
+    name: NotifiqueMeNuGet
 deploy:
-   # NuGet
-  - provider: NuGet
-    api_key:
-      secure: ty/C9+zIqbXaj8BRG+aiDTMHgfdz9NMXjEVaOuQ/SjwHzhEjJpf+3QHKRwPTSceX
-    skip_symbols: false
-    artifact: '**\*.nupkg'
-
-  # GitHub
+   # GitHub
   - provider: GitHub
     tag: $(appveyor_build_version)
     release: v$(appveyor_build_version)
     description: 'Release publicada pela integração com o AppVeyor'
     auth_token:
       secure: S8J30uBVO6nnJrL7MZ4EfUk0wX7mwlhLpXamPGijyaC6adefhnGAKuZzABknfkqb # your encrypted token from GitHub
+    #artifact: NotifiqueMeZip      
     draft: false
     prerelease: false
     on:
       branch: master                
       appveyor_repo_tag: false
+   
+   # NuGet
+  - provider: NuGet
+    api_key:
+      secure: ty/C9+zIqbXaj8BRG+aiDTMHgfdz9NMXjEVaOuQ/SjwHzhEjJpf+3QHKRwPTSceX
+    skip_symbols: false
+    artifact: NotifiqueMeNuGet
+ 
 on_finish :
   - echo Processo finalizado.
