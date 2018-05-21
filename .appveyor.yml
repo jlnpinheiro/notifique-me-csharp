@@ -19,7 +19,8 @@ build:
   project: NotifiqueMe.sln
   publish_nuget: true 
 after_build:
-  - 
+  - echo %APPVEYOR_BUILD_FOLDER%
+  - 7z a NotifiqueMe.zip %APPVEYOR_BUILD_FOLDER%\*
 build_script:
   - cmd: dotnet build
   - cmd: dotnet pack
@@ -41,7 +42,8 @@ deploy:
 
   # GitHub
   - provider: GitHub
-    release: NotifiqueMe-v$(appveyor_build_version)
+    tag: $(appveyor_build_version)
+    release: v$(appveyor_build_version)
     description: 'Release publicada pela integração com o AppVeyor'
     auth_token:
       secure: S8J30uBVO6nnJrL7MZ4EfUk0wX7mwlhLpXamPGijyaC6adefhnGAKuZzABknfkqb # your encrypted token from GitHub
