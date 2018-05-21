@@ -40,7 +40,6 @@ deploy:
     description: 'Release publicada pela integração com o AppVeyor'
     auth_token:
       secure: S8J30uBVO6nnJrL7MZ4EfUk0wX7mwlhLpXamPGijyaC6adefhnGAKuZzABknfkqb # your encrypted token from GitHub
-    #artifact: NotifiqueMeZip      
     draft: false
     prerelease: false
     on:
