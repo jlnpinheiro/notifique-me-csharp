@@ -33,7 +33,7 @@ artifacts:
 deploy: 
   provider: NuGet
   api_key:
-    secure: BbV/KFKLOAbPhQpkPYd4vd84hLJgPvfXGk0OfQ/x4VjHtwjVXla0HVX8LbdOLigX
+    secure: ty/C9+zIqbXaj8BRG+aiDTMHgfdz9NMXjEVaOuQ/SjwHzhEjJpf+3QHKRwPTSceX
   skip_symbols: false
 on_finish :
   - cmd: echo Processo finalizado.
