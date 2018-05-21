@@ -20,11 +20,10 @@ build:
   project: NotifiqueMe.sln
 build_script:
   - cmd: dotnet build
+  - cmd: dotnet pack
 test_script:
   - cmd: cd NotifiqueMe.Tests
   - cmd: dotnet test
-after_test:
-  - cmd: dotnet pack
 artifacts:
   - path: '**\*.nupkg'
     name: NotifiqueMeNuGet
@@ -50,4 +49,4 @@ deploy:
       branch: master                
       appveyor_repo_tag: false
 on_finish :
-  - echo Processo finalizado com sucesso.
+  - echo Processo finalizado.
