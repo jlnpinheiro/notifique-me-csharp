@@ -14,6 +14,7 @@ dotnet_csproj:
   informational_version: '{version}'
 build:
   project: NotifiqueMe.sln
+  publish_nuget: true 
 before_build:
   - cmd: echo Iniciando o processo...
   - cmd: dotnet --version
@@ -26,9 +27,6 @@ test_script:
   - cmd: dotnet restore
   - cmd: cd NotifiqueMe.Tests
   - cmd: dotnet test
-before_deploy:
-  - cmd: echo Iniciando packing para o Nuget...
-  - cmd: dotnet pack
 deploy: 
   provider: NuGet
   api_key:
