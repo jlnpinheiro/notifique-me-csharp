@@ -12,7 +12,7 @@ namespace Infraestrutura.Comum.Tests.Notificacoes
         {
             var valor = true;
 
-            this.NotificarSeVerdadeiro(valor, "O valor é verdadeiro.");
+            this.NotificarSeVerdadeiro(valor, "O valor é verdadeiro. ");
 
             Assert.IsFalse(this.Invalido);
         }
