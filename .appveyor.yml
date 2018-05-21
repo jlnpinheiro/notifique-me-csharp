@@ -33,12 +33,14 @@ artifacts:
     type: zip
 deploy:
   release: NotifiqueMe-v$(appveyor_build_version)
-  description: 'Release publicada pela integração com o AppVeyor' 
+  description: 'Release publicada pela integração com o AppVeyor'
+   
    # NuGet
   - provider: NuGet
     api_key:
       secure: ty/C9+zIqbXaj8BRG+aiDTMHgfdz9NMXjEVaOuQ/SjwHzhEjJpf+3QHKRwPTSceX
     skip_symbols: false
+
   # GitHub
   - provider: GitHub
     auth_token:
