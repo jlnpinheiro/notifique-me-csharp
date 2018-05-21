@@ -32,6 +32,5 @@ deploy:
   api_key:
     secure: BbV/KFKLOAbPhQpkPYd4vd84hLJgPvfXGk0OfQ/x4VjHtwjVXla0HVX8LbdOLigX
   skip_symbols: false
-  artifact: /.*\.nupkg/
 on_finish :
   - cmd: echo Processo finalizado.
