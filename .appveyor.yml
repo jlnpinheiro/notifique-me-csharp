@@ -18,14 +18,13 @@ before_build:
   - cmd: dotnet restore
 build:
   project: NotifiqueMe.sln
-  publish_nuget: true 
 build_script:
   - cmd: dotnet build
-  - cmd: dotnet pack
 test_script:
-  - cmd: dotnet restore
   - cmd: cd NotifiqueMe.Tests
   - cmd: dotnet test
+after_test:
+  - cmd: dotnet pack
 artifacts:
   - path: '**\*.nupkg'
     name: NotifiqueMeNuGet
@@ -46,8 +45,9 @@ deploy:
       secure: S8J30uBVO6nnJrL7MZ4EfUk0wX7mwlhLpXamPGijyaC6adefhnGAKuZzABknfkqb # your encrypted token from GitHub
     draft: false
     prerelease: false
+    artifact:
     on:
       branch: master                
       appveyor_repo_tag: false
 on_finish :
-  - echo Processo finalizado.
+  - echo Processo finalizado com sucesso.
