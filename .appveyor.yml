@@ -28,13 +28,6 @@ artifacts:
   - path: '**\*.nupkg'
     name: NotifiqueMeNuGet
 deploy:
-   # NuGet
-  - provider: NuGet
-    api_key:
-      secure: ty/C9+zIqbXaj8BRG+aiDTMHgfdz9NMXjEVaOuQ/SjwHzhEjJpf+3QHKRwPTSceX # your encrypted token from Nuget
-    skip_symbols: false
-    artifact: NotifiqueMeNuGet
- 
   # GitHub
   - provider: GitHub
     tag: v$(appveyor_build_version)
@@ -48,5 +41,12 @@ deploy:
     on:
       branch: master                
       appveyor_repo_tag: false
-on_finish :
-  - echo Processo finalizado.
+
+  # NuGet
+  - provider: NuGet
+    api_key:
+      secure: ty/C9+zIqbXaj8BRG+aiDTMHgfdz9NMXjEVaOuQ/SjwHzhEjJpf+3QHKRwPTSceX # your encrypted token from Nuget
+    skip_symbols: false
+    artifact: NotifiqueMeNuGet
+on_success:
+  - echo Processo finalizado com sucesso!
