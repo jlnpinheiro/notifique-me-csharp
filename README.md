@@ -1,5 +1,5 @@
 # Notifique-me! 
-[![NuGet](https://img.shields.io/nuget/dt/NotifiqueMe.svg?style=for-the-badge)](https://www.nuget.org/packages/NotifiqueMe)
+[![NuGet](https://img.shields.io/nuget/dt/NotifiqueMe.svg)](https://www.nuget.org/packages/NotifiqueMe)
 
 Projeto que permite a utilização de maneira simples do pattern "Domain notifications". 
 
