@@ -3,21 +3,33 @@ image: Visual Studio 2017
 branches:
   only:
   - master
+configuration: Release  
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+build:
+  project: NotifiqueMe.sln
 before_build:
   - cmd: dotnet --version
   - cmd: dotnet restore
 build_script:
+  - echo Iniciando build...
   - cmd: dotnet build
-artifacts:
- - path: '\src\bin\Debug\netcoreapp1.1\publish'
-   name: WebSite
-   type: WebDeployPackage
-clone_depth: 1
 test_script:
+  - echo Iniciando testes...
   - cmd: dotnet restore
-  # run the unit tests (requires changing into the test directory)
   - cmd: cd NotifiqueMe.Tests
   - cmd: dotnet test
+deploy: 
+  - provider: NuGet
+      api_key:
+        secure: BbV/KFKLOAbPhQpkPYd4vd84hLJgPvfXGk0OfQ/x4VjHtwjVXla0HVX8LbdOLigX
+      skip_symbols: false
+      artifact: /.*\.nupkg/
 on_finish :
-  
-deploy: off
+  - echo Processo finalizado.
