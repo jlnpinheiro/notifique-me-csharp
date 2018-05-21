@@ -12,14 +12,15 @@ dotnet_csproj:
   assembly_version: '{version}'
   file_version: '{version}'
   informational_version: '{version}'
-build:
-  project: NotifiqueMe.sln
-  publish_nuget: true 
 before_build:
   - cmd: dotnet --version
   - cmd: dotnet restore
+build:
+  project: NotifiqueMe.sln
+  publish_nuget: true 
+after_build:
+  - 
 build_script:
-  - cmd: echo Iniciando build...
   - cmd: dotnet build
   - cmd: dotnet pack
 test_script:
@@ -28,7 +29,7 @@ test_script:
   - cmd: dotnet test
 artifacts:
   - path: '**\*.nupkg'
-  - path: NotifiqueMe.zip
+  - path: '**\*.zip'
     name: NotifiqueMeZip
     type: zip
 deploy:
