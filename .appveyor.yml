@@ -1,0 +1,23 @@
+version: '1.0.{build}'
+image: Visual Studio 2017
+branches:
+  only:
+  - master
+before_build:
+  - cmd: dotnet --version
+  - cmd: dotnet restore
+build_script:
+  - cmd: dotnet build
+artifacts:
+ - path: '\src\bin\Debug\netcoreapp1.1\publish'
+   name: WebSite
+   type: WebDeployPackage
+clone_depth: 1
+test_script:
+  - cmd: dotnet restore
+  # run the unit tests (requires changing into the test directory)
+  - cmd: cd NotifiqueMe.Tests
+  - cmd: dotnet test
+on_finish :
+  
+deploy: off
