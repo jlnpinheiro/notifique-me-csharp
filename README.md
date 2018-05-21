@@ -1,4 +1,5 @@
-# Notifique-me!
+# Notifique-me! 
+[![NuGet](https://img.shields.io/nuget/dt/NotifiqueMe.svg?style=for-the-badge)](https://www.nuget.org/packages/NotifiqueMe)
 Projeto que permite a utilização de maneira simples do pattern "Domain notifications". 
 
 Esse projeto é altamente baseado no projeto **Flunt** (https://github.com/andrebaltieri/flunt). Porém a necessidade de utilizar o projeto em uma versão do .NET Standard inferior a versão 1.3 e a necessidade de traduzir para o português-BR, motivou a criação desse projeto.
