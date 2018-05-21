@@ -14,7 +14,7 @@ namespace Infraestrutura.Comum.Tests.Notificacoes
 
             this.NotificarSeVerdadeiro(valor, "O valor é verdadeiro.");
 
-            Assert.IsTrue(this.Invalido);
+            Assert.IsFalse(this.Invalido);
         }
 
         [TestMethod]
