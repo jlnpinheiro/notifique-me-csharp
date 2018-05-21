@@ -26,10 +26,10 @@ test_script:
   - cmd: cd NotifiqueMe.Tests
   - cmd: dotnet test
 deploy: 
-  - provider: NuGet
-      api_key:
-        secure: BbV/KFKLOAbPhQpkPYd4vd84hLJgPvfXGk0OfQ/x4VjHtwjVXla0HVX8LbdOLigX
-      skip_symbols: false
-      artifact: /.*\.nupkg/
+  provider: NuGet
+  api_key:
+    secure: BbV/KFKLOAbPhQpkPYd4vd84hLJgPvfXGk0OfQ/x4VjHtwjVXla0HVX8LbdOLigX
+  skip_symbols: false
+  artifact: /.*\.nupkg/
 on_finish :
   - echo Processo finalizado.
