@@ -30,7 +30,7 @@ test:
 artifacts:
   - path: '**\NotifiqueMe*.nupkg'
     name: NotifiqueMeNuGet
-deploy:
+#deploy:
   # NuGet
   #- provider: NuGet
   #  api_key:
