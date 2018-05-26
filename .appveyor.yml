@@ -5,7 +5,9 @@ branches:
   only:
   - master
 skip_tags: true
-configuration: Release  
+configuration: Release
+install:
+  - cmd: dotnet restore
 dotnet_csproj:
   patch: true
   file: '**\*.csproj'
@@ -14,15 +16,13 @@ dotnet_csproj:
   assembly_version: '{version}'
   file_version: '{version}'
   informational_version: '{version}'
-before_build:
-  - cmd: dotnet restore
 build:
   verbosity: minimal
   project: NotifiqueMe.sln
 build_script:
   - cmd: dotnet build
-after_build:
   - cmd: dotnet test
+after_build:
   - cmd: dotnet pack
 test:
     assemblies:
