@@ -15,7 +15,6 @@ dotnet_csproj:
   file_version: '{version}'
   informational_version: '{version}'
 before_build:
-  - cmd: dotnet --version
   - cmd: dotnet restore
 build:
   verbosity: minimal
@@ -23,6 +22,7 @@ build:
 build_script:
   - cmd: dotnet build
 after_build:
+  - cmd: dotnet test
   - cmd: dotnet pack
 test:
     assemblies:
