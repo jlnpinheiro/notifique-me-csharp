@@ -21,10 +21,9 @@ build:
   project: NotifiqueMe.sln
 build_script:
   - cmd: dotnet build
+  - cmd: dotnet pack
   - cmd: cd NotifiqueMe.Tests
   - cmd: dotnet test
-after_build:
-  - cmd: dotnet pack
 test:
     assemblies:
       - '**\*NotifiqueMe.TestsCore.dll'
