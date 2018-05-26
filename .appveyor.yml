@@ -24,9 +24,6 @@ build_script:
   - cmd: dotnet pack
   - cmd: cd NotifiqueMe.Tests
   - cmd: dotnet test
-test:
-    assemblies:
-      - '**\*NotifiqueMe.TestsCore.dll'
 artifacts:
   - path: '**\NotifiqueMe*.nupkg'
     name: NotifiqueMeNuGet
