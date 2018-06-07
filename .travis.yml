@@ -1,8 +1,0 @@
-﻿language: csharp
-solution: NotifiqueMe.sln
-mono: none
-dotnet: 2.0.0
-script:
-    - dotnet restore
-    - cd NotifiqueMe.Tests
-    - dotnet test

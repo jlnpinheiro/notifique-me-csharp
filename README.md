@@ -1,5 +1,5 @@
 # Notifique-me! 
-![Travis](https://img.shields.io/travis/jlnpinheiro/notifique-me-csharp.svg?branch=master&style=flat-square) [![NuGet](https://img.shields.io/nuget/dt/NotifiqueMe.svg?style=flat-square)](https://www.nuget.org/packages/NotifiqueMe) [![NuGet](https://img.shields.io/nuget/v/NotifiqueMe.svg?style=flat-square)](https://www.nuget.org/packages/NotifiqueMe)
+[![AppVayor](https://ci.appveyor.com/api/projects/status/i1a5t4om20f5p53p?svg=true)](https://ci.appveyor.com/project/jlnpinheiro/notifique-me-csharp) [![NuGet](https://img.shields.io/nuget/dt/NotifiqueMe.svg?style=flat-square)](https://www.nuget.org/packages/NotifiqueMe) [![NuGet](https://img.shields.io/nuget/v/NotifiqueMe.svg?style=flat-square)](https://www.nuget.org/packages/NotifiqueMe)
 
 Projeto que permite a utilização de maneira simples do pattern "Domain notifications". 
 
