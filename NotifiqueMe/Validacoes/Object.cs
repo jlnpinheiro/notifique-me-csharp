@@ -48,7 +48,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="obj2">Objeto que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificaSeIguais(this Notificavel notificavel, object obj1, object obj2, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static Notificavel NotificarSeIguais(this Notificavel notificavel, object obj1, object obj2, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -67,7 +67,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="obj2">Objeto que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificaSeDiferentes(this Notificavel notificavel, object obj1, object obj2, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static Notificavel NotificarSeDiferentes(this Notificavel notificavel, object obj1, object obj2, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;

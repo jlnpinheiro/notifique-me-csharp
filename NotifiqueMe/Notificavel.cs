@@ -16,6 +16,11 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         public IReadOnlyCollection<Notificacao> Notificacoes => _notificacoes;
 
         /// <summary>
+        /// Coleção de todas as mensagens geradas pelas notificações.
+        /// </summary>
+        public IReadOnlyCollection<string> Mensagens => _notificacoes.Any() ? _notificacoes.Select(x => x.Mensagem).ToList() : new List<string>();
+
+        /// <summary>
         /// Indica a existência de pelo menos uma notificação. Havendo uma notificação, é considerado inválido.
         /// </summary>
         public bool Invalido => _notificacoes.Any();
@@ -52,16 +57,6 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         {
             if (notificacao != null)
                 _notificacoes.Add(notificacao);
-        }
-
-        /// <summary>
-        /// Adiciona uma coleção de notificações
-        /// </summary>
-        /// <param name="notificacoes">Notificações que serão adicionadas</param>
-        public void AdicionarNotificacoes(ICollection<Notificacao> notificacoes)
-        {
-            if (notificacoes != null && notificacoes.Any())
-                _notificacoes.AddRange(notificacoes);
         }
 
         /// <summary>
