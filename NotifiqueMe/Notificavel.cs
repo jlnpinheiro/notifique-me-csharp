@@ -6,7 +6,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
     /// <summary>
     /// Classe que quando herdada, permite a utilização de notificações (domain notifications)
     /// </summary>
-    public abstract class Notificavel
+    public abstract class Notificavel : INotificavel
     {
         private readonly List<Notificacao> _notificacoes;
 
