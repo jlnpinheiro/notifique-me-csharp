@@ -13,7 +13,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMaiorQue(this Notificavel notificavel, decimal numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMaiorQue(this INotificavel notificavel, decimal numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -32,7 +32,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMaiorQue(this Notificavel notificavel, double numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMaiorQue(this INotificavel notificavel, double numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -51,7 +51,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMaiorQue(this Notificavel notificavel, float numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMaiorQue(this INotificavel notificavel, float numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -70,7 +70,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMaiorQue(this Notificavel notificavel, int numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMaiorQue(this INotificavel notificavel, int numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -91,7 +91,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMaiorOuIgualA(this Notificavel notificavel, decimal numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMaiorOuIgualA(this INotificavel notificavel, decimal numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -110,7 +110,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMaiorOuIgualA(this Notificavel notificavel, double numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMaiorOuIgualA(this INotificavel notificavel, double numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -129,7 +129,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMaiorOuIgualA(this Notificavel notificavel, float numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMaiorOuIgualA(this INotificavel notificavel, float numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -148,7 +148,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMaiorOuIgualA(this Notificavel notificavel, int numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMaiorOuIgualA(this INotificavel notificavel, int numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -169,7 +169,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMenorQue(this Notificavel notificavel, decimal numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMenorQue(this INotificavel notificavel, decimal numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -188,7 +188,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMenorQue(this Notificavel notificavel, double numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMenorQue(this INotificavel notificavel, double numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -207,7 +207,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMenorQue(this Notificavel notificavel, float numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMenorQue(this INotificavel notificavel, float numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -226,7 +226,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMenorQue(this Notificavel notificavel, int numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMenorQue(this INotificavel notificavel, int numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -247,7 +247,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMenorOuIgualA(this Notificavel notificavel, decimal numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMenorOuIgualA(this INotificavel notificavel, decimal numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -266,7 +266,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMenorOuIgualA(this Notificavel notificavel, double numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMenorOuIgualA(this INotificavel notificavel, double numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -285,7 +285,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMenorOuIgualA(this Notificavel notificavel, float numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMenorOuIgualA(this INotificavel notificavel, float numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -304,7 +304,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMenorOuIgualA(this Notificavel notificavel, int numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMenorOuIgualA(this INotificavel notificavel, int numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -325,7 +325,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroFim">Número final do período a ser comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeEntre(this Notificavel notificavel, float numero, float numeroInicio, float numeroFim, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeEntre(this INotificavel notificavel, float numero, float numeroInicio, float numeroFim, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -345,7 +345,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeIguais(this Notificavel notificavel, decimal numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeIguais(this INotificavel notificavel, decimal numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -364,7 +364,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeIguais(this Notificavel notificavel, double numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeIguais(this INotificavel notificavel, double numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -383,7 +383,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeIguais(this Notificavel notificavel, float numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeIguais(this INotificavel notificavel, float numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -402,7 +402,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeIguais(this Notificavel notificavel, int numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeIguais(this INotificavel notificavel, int numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -423,7 +423,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeDiferentes(this Notificavel notificavel, decimal numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeDiferentes(this INotificavel notificavel, decimal numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -442,7 +442,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeDiferentes(this Notificavel notificavel, double numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeDiferentes(this INotificavel notificavel, double numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -461,7 +461,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeDiferentes(this Notificavel notificavel, float numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeDiferentes(this INotificavel notificavel, float numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -480,7 +480,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="numeroComparado">Número que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeDiferentes(this Notificavel notificavel, int numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeDiferentes(this INotificavel notificavel, int numero, float numeroComparado, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;

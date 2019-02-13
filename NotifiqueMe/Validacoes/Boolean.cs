@@ -11,7 +11,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="valor">Valor booleano a ser verificado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeVerdadeiro(this Notificavel notificavel, bool valor, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeVerdadeiro(this INotificavel notificavel, bool valor, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -29,7 +29,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="valor">Valor booleano a ser verificado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeFalso(this Notificavel notificavel, bool valor, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeFalso(this INotificavel notificavel, bool valor, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;

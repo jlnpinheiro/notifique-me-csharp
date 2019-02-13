@@ -12,7 +12,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="valor">String a ser verificada.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeNuloOuVazio(this Notificavel notificavel, string valor, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeNuloOuVazio(this INotificavel notificavel, string valor, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -30,7 +30,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="valor">String a ser verificada.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeNaoNuloOuVazio(this Notificavel notificavel, string valor, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeNaoNuloOuVazio(this INotificavel notificavel, string valor, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -49,7 +49,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="limite">Quantidade limite de caracteres.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSePossuirTamanhoSuperiorA(this Notificavel notificavel, string valor, int limite, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSePossuirTamanhoSuperiorA(this INotificavel notificavel, string valor, int limite, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -68,7 +68,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="limite">Quantidade limite de caracteres.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSePossuirTamanhoInferiorA(this Notificavel notificavel, string valor, int limite, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSePossuirTamanhoInferiorA(this INotificavel notificavel, string valor, int limite, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -87,7 +87,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="quantidade">Quantidade de caracteres a ser verificado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSePossuirTamanhoDiferente(this Notificavel notificavel, string valor, int quantidade, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSePossuirTamanhoDiferente(this INotificavel notificavel, string valor, int quantidade, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -106,7 +106,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="stringProcurada">String que será procurada.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeContem(this Notificavel notificavel, string valor, string stringProcurada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeContem(this INotificavel notificavel, string valor, string stringProcurada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -125,7 +125,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="stringProcurada">String que será procurada.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeNaoContem(this Notificavel notificavel, string valor, string stringProcurada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeNaoContem(this INotificavel notificavel, string valor, string stringProcurada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -144,7 +144,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="stringComparada">String que será comparada.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeIguais(this Notificavel notificavel, string valor, string stringComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeIguais(this INotificavel notificavel, string valor, string stringComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -163,7 +163,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="stringComparada">String que será comparada.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeDiferentes(this Notificavel notificavel, string valor, string stringComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeDiferentes(this INotificavel notificavel, string valor, string stringComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -182,7 +182,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="expressaoRegular">Expressão regular utilizada para validar.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeExpressaoRegularNaoValida(this Notificavel notificavel, string valor, string expressaoRegular, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeExpressaoRegularNaoValida(this INotificavel notificavel, string valor, string expressaoRegular, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -200,7 +200,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="email">E-mail a ser validado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeEmailInvalido(this Notificavel notificavel, string email, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeEmailInvalido(this INotificavel notificavel, string email, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -215,7 +215,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="url">URL a ser validada.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeUrlInvalida(this Notificavel notificavel, string url, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeUrlInvalida(this INotificavel notificavel, string url, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;

@@ -13,7 +13,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="dataComparada">Data que será comparada.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMaiorQue(this Notificavel notificavel, DateTime data, DateTime dataComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMaiorQue(this INotificavel notificavel, DateTime data, DateTime dataComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -32,7 +32,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="dataComparada">Data que será comparada.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMaiorOuIgualA(this Notificavel notificavel, DateTime data, DateTime dataComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMaiorOuIgualA(this INotificavel notificavel, DateTime data, DateTime dataComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -51,7 +51,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="dataComparada">Data que será comparada.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMenorQue(this Notificavel notificavel, DateTime data, DateTime dataComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMenorQue(this INotificavel notificavel, DateTime data, DateTime dataComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -70,7 +70,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="dataComparada">Data que será comparada.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeMenorOuIgualA(this Notificavel notificavel, DateTime data, DateTime dataComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeMenorOuIgualA(this INotificavel notificavel, DateTime data, DateTime dataComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -90,7 +90,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="dataFim">Data final do período a ser comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeEntre(this Notificavel notificavel, DateTime data, DateTime dataInicio, DateTime dataFim, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeEntre(this INotificavel notificavel, DateTime data, DateTime dataInicio, DateTime dataFim, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -109,7 +109,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="dataComparada">Data que será comparada.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeIguais(this Notificavel notificavel, DateTime data, DateTime dataComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeIguais(this INotificavel notificavel, DateTime data, DateTime dataComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
@@ -128,7 +128,7 @@ namespace JNogueira.Infraestrutura.NotifiqueMe
         /// <param name="dataComparada">Data que será comparada.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static Notificavel NotificarSeDiferentes(this Notificavel notificavel, DateTime data, DateTime dataComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        public static INotificavel NotificarSeDiferentes(this INotificavel notificavel, DateTime data, DateTime dataComparada, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
         {
             if (notificavel == null)
                 return null;
