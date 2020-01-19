@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace JNogueira.Infraestrutura.NotifiqueMe
+namespace JNogueira.NotifiqueMe
 {
     public static partial class Notificar
     {

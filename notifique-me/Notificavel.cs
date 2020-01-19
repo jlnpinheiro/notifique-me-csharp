@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace JNogueira.Infraestrutura.NotifiqueMe
+namespace JNogueira.NotifiqueMe
 {
     /// <summary>
     /// Classe que quando herdada, permite a utilização de notificações (domain notifications)

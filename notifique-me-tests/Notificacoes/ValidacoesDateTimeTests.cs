@@ -1,5 +1,5 @@
 ﻿using System;
-using JNogueira.Infraestrutura.NotifiqueMe;
+using JNogueira.NotifiqueMe;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Infraestrutura.Comum.Tests.Notificacoes

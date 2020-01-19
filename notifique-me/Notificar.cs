@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace JNogueira.Infraestrutura.NotifiqueMe
+namespace JNogueira.NotifiqueMe
 {
     /// <summary>
     /// Classe responsável por adicionar notificações, caso uma determinada regra seja satisfeita.

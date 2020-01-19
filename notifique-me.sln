@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotifiqueMe", "NotifiqueMe\NotifiqueMe.csproj", "{6855E2DB-A532-4405-9628-C67A6F503899}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "notifique-me", "notifique-me\notifique-me.csproj", "{6855E2DB-A532-4405-9628-C67A6F503899}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NotifiqueMe.TestsCore", "NotifiqueMe.Tests\NotifiqueMe.TestsCore.csproj", "{8DF6B906-E4ED-4349-926E-E01595077E2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "notifique-me-tests", "notifique-me-tests\notifique-me-tests.csproj", "{8DF6B906-E4ED-4349-926E-E01595077E2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

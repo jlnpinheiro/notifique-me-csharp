@@ -1,4 +1,4 @@
-﻿using JNogueira.Infraestrutura.NotifiqueMe;
+﻿using JNogueira.NotifiqueMe;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
