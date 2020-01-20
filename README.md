@@ -25,10 +25,10 @@ Cada *"if"* pode trazer complexidade no entendimento do seu código. Além disso
 Conheci esse "pattern" pelos treinamentos do [André Baltieri](https://github.com/andrebaltieri) , no site Balta.IO (http://balta.io/) e confesso que depois disso, uso *if* com muito mais sabedoria e deixo as *exceptions* para os imprevistos do dia a dia...
 
 ### Sua classe "notificável"
-Para que sua classe se torne "notificável", basta herdar da classe **Notificavel** (namespace *JNogueira.Infraestrutura.NotifiqueMe*)
+Para que sua classe se torne "notificável", basta herdar da classe **Notificavel** (namespace *JNogueira.NotifiqueMe*)
 
 ```csharp
-using JNogueira.Infraestrutura.NotifiqueMe;
+using JNogueira.NotifiqueMe;
 
 namespace StarWars
 {
@@ -144,7 +144,7 @@ this.NotificarSeMaiorOuIgualA(3, 2, "O valor 3 é maior ou igual ao valor 2.");
 A lista de validações está disponível em https://github.com/jlnpinheiro/notifique-me-csharp/tree/master/NotifiqueMe/Validacoes. Deixe já aquele seu *pull request* para contribuir!
 
 ## Dependências
-.NET Standard 1.2+
+.NET Standard 2.0+
 
 Informações sobre versões suportadas em https://docs.microsoft.com/pt-br/dotnet/standard/net-standard
 
