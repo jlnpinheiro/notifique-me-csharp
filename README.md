@@ -44,7 +44,7 @@ Pronto, sua classe já está preparada para utilizar notificações!
 Ao herdar da classe **Notificavel**, você poderá utilizar os métodos **AdicionarNotificacao** e **AdicionarNotificacoes** para adicionar notificações.
 
 ```csharp
-using JNogueira.Infraestrutura.NotifiqueMe;
+using JNogueira.NotifiqueMe;
 
 namespace StarWars
 {
