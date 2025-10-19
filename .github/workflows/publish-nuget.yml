@@ -1,0 +1,37 @@
+name: Publish NuGet
+
+on:
+  push:
+    tags:
+      - '*.*.*'  # Ex: 1.0.0
+
+env:
+  NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }} # Obtém dos secrets do repositório
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup .NET Standart 2.1
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Run Tests
+        run: dotnet test notifique-me-test/notifique-me-test.csproj --configuration Release --no-build --verbosity normal
+
+      - name: Pack
+        run: dotnet pack notifique-me/notifique-me.csproj --configuration Release --no-build -o ./nupkg /p:PackageVersion=${{ github.ref_name }}
+
+      - name: Publish to NuGet
+        run: dotnet nuget push "./nupkg/*.nupkg" --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
