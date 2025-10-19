@@ -3,13 +3,10 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.1</TargetFramework>
 		<RootNamespace>JNogueira.NotifiqueMe</RootNamespace>
-		<AssemblyName>notifique-me</AssemblyName>
+		<PackageId>Utilzao</PackageId>
 		<Authors>Jorge Nogueira</Authors>
 		<Product>Notifique Me!</Product>
-		<Description>
-			Projeto que permite a utilização de maneira simples do pattern "Domain Notifications".
-			Projeto é baseado no projeto Flunt (https://github.com/andrebaltieri/flunt). Porém a necessidade de traduzir para o português-BR, motivou a criação desse projeto.
-		</Description>
+		<Description>Projeto que permite a utilização de maneira simples do pattern "Domain Notifications". Projeto é baseado no projeto Flunt (https://github.com/andrebaltieri/flunt). Porém a necessidade de traduzir para o português-BR, motivou a criação desse projeto.		</Description>
 		<PackageProjectUrl>https://github.com/jlnpinheiro/notifique-me-csharp</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/jlnpinheiro/notifique-me-csharp</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
