@@ -20,7 +20,7 @@ public class NotificavelTests : Notificavel
     {
         var obj = new ClasseNotificavel();
 
-        obj.AdicionarNotificacao("Notificação 1", new Dictionary<string, string> { { "Info adicional 1", "Teste" }, { "Info adicional 2", "Teste" } });
+        obj.AdicionarNotificacao("Notificação 1", new Dictionary<string, string> { { "Info adicional 1", "Teste" }, { "Info adicional 2", "Teste" } }, "N001");
 
         Assert.That(obj.Notificacoes.First().InformacoesAdicionais, Has.Count.EqualTo(2));
     }
@@ -29,7 +29,7 @@ public class NotificavelTests : Notificavel
     [Category("Geral")]
     public void Deve_Adicionar_Colecao_Notificacoes()
     {
-        var lst = new List<Notificacao> { new("Notificação 1"), new("Notificação 2") };
+        var lst = new List<Notificacao> { new("Notificação 1", "N001"), new("Notificação 2", "N002") };
 
         var obj = new ClasseNotificavel();
 
@@ -44,12 +44,12 @@ public class NotificavelTests : Notificavel
     {
         var obj1 = new ClasseNotificavel();
 
-        obj1.AdicionarNotificacao("Notificação 1");
+        obj1.AdicionarNotificacao("Notificação 1", "N001");
 
         var obj2 = new ClasseNotificavel();
 
-        obj2.AdicionarNotificacao("Notificação 2");
-        obj2.AdicionarNotificacao("Notificação 3");
+        obj2.AdicionarNotificacao("Notificação 2", "N002");
+        obj2.AdicionarNotificacao("Notificação 3", "N003");
 
         obj2.AdicionarNotificacoes(obj1);
 

@@ -18,7 +18,7 @@ namespace JNogueira.NotifiqueMe
         /// <summary>
         /// Coleção de todas as mensagens geradas pelas notificações.
         /// </summary>
-        public IReadOnlyCollection<string> Mensagens => _notificacoes.Any() ? _notificacoes.Select(x => x.Mensagem).ToList() : new List<string>();
+        public IReadOnlyCollection<string> Mensagens => _notificacoes.Any() ? _notificacoes.ConvertAll(x => x.Mensagem): new List<string>();
 
         /// <summary>
         /// Indica a existência de pelo menos uma notificação. Havendo uma notificação, é considerado inválido.
@@ -34,9 +34,10 @@ namespace JNogueira.NotifiqueMe
         /// Adiciona uma notificação
         /// </summary>
         /// <param name="mensagem">Mensagem da notificação</param>
-        public void AdicionarNotificacao(string mensagem)
+        /// <param name="id">Identificador da notificação (opcional)</param>
+        public void AdicionarNotificacao(string mensagem, string id = null)
         {
-            _notificacoes.Add(new Notificacao(mensagem));
+            _notificacoes.Add(new Notificacao(mensagem, id));
         }
 
         /// <summary>
@@ -44,9 +45,10 @@ namespace JNogueira.NotifiqueMe
         /// </summary>
         /// <param name="mensagem">Mensagem da notificação</param>
         /// <param name="informacoesAdicionais">Coleção de informações adicionais relacionadas a notificação</param>
-        public void AdicionarNotificacao(string mensagem, Dictionary<string, string> informacoesAdicionais)
+        /// <param name="id">Identificador da notificação (opcional)</param>
+        public void AdicionarNotificacao(string mensagem, Dictionary<string, string> informacoesAdicionais, string id = null)
         {
-            _notificacoes.Add(new Notificacao(mensagem, informacoesAdicionais));
+            _notificacoes.Add(new Notificacao(mensagem, informacoesAdicionais, id));
         }
 
         /// <summary>
@@ -65,7 +67,7 @@ namespace JNogueira.NotifiqueMe
         /// <param name="notificacoes">Notificações que serão adicionadas</param>
         public void AdicionarNotificacoes(IReadOnlyCollection<Notificacao> notificacoes)
         {
-            if (notificacoes != null && notificacoes.Any())
+            if (notificacoes?.Any() == true)
                 _notificacoes.AddRange(notificacoes);
         }
 

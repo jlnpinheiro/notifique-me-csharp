@@ -9,8 +9,8 @@ namespace JNogueira.NotifiqueMe
         IReadOnlyCollection<Notificacao> Notificacoes { get; }
 
         void AdicionarNotificacao(Notificacao notificacao);
-        void AdicionarNotificacao(string mensagem);
-        void AdicionarNotificacao(string mensagem, Dictionary<string, string> informacoesAdicionais);
+        void AdicionarNotificacao(string mensagem, string id = null);
+        void AdicionarNotificacao(string mensagem, Dictionary<string, string> informacoesAdicionais, string id = null);
         void AdicionarNotificacoes(IReadOnlyCollection<Notificacao> notificacoes);
         void AdicionarNotificacoes(Notificavel notificavel);
         void AdicionarNotificacoes(params Notificavel[] notificaveis);

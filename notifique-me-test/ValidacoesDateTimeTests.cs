@@ -7,7 +7,7 @@ public class ValidacoesDateTimeTests : Notificavel
     {
         var valor = DateTime.Today;
 
-        this.NotificarSeMaiorQue(valor, valor.AddDays(-1), "A data informada é maior que a data comparada.");
+        this.NotificarSeMaiorQue(valor, valor.AddDays(-1), "A data informada é maior que a data comparada.", id: "ERR001");
 
         Assert.That(Invalido);
     }
@@ -18,7 +18,7 @@ public class ValidacoesDateTimeTests : Notificavel
     {
         var valor = DateTime.Today;
 
-        this.NotificarSeMaiorOuIgualA(valor, valor, "A data informada é maior ou igual a data comparada.");
+        this.NotificarSeMaiorOuIgualA(valor, valor, "A data informada é maior ou igual a data comparada.", id: "ERR002");
 
         Assert.That(Invalido);
     }
@@ -29,7 +29,7 @@ public class ValidacoesDateTimeTests : Notificavel
     {
         var valor = DateTime.Today;
 
-        this.NotificarSeMenorQue(valor, valor.AddDays(1), "A data informada é menor que a data comparada.");
+        this.NotificarSeMenorQue(valor, valor.AddDays(1), "A data informada é menor que a data comparada.", id: "ERR003");
 
         Assert.That(Invalido);
     }

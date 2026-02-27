@@ -8,6 +8,11 @@ namespace JNogueira.NotifiqueMe
     public sealed class Notificacao
     {
         /// <summary>
+        /// Identificador único da notificação (se necessário)
+        /// </summary>
+        public string Id { get; }
+
+        /// <summary>
         /// Mensagem da notificação
         /// </summary>
         public string Mensagem { get; }
@@ -21,9 +26,11 @@ namespace JNogueira.NotifiqueMe
         /// Cria uma notificação
         /// </summary>
         /// <param name="mensagem">Mensagem da notificação</param>
-        public Notificacao(string mensagem)
+        /// <param name="id">Identificador único da notificação (opcional)</param>
+        public Notificacao(string mensagem, string id = null)
         {
             this.Mensagem = mensagem;
+            this.Id = id;
         }
 
         /// <summary>
@@ -31,10 +38,12 @@ namespace JNogueira.NotifiqueMe
         /// </summary>
         /// <param name="mensagem">Mensagem da notificação</param>
         /// <param name="informacoesAdicionais">Coleção de informações adicionais relacionadas a notificação.</param>
-        public Notificacao(string mensagem, Dictionary<string, string> informacoesAdicionais)
+        /// <param name="id">Identificador único da notificação (opcional)</param>
+        public Notificacao(string mensagem, Dictionary<string, string> informacoesAdicionais, string id = null)
         {
             this.Mensagem = mensagem;
             this.InformacoesAdicionais = informacoesAdicionais;
+            this.Id = id;
         }
     }
 }

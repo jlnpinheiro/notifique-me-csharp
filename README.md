@@ -56,7 +56,7 @@ namespace StarWars
                 this.AdicionarNotificacao("Informe seu nome, guerreiro!");
 
             if (anosExperiencia >= 1 && anosExperiencia <= 5)
-                this.AdicionarNotificacao("Você ainda é um padawan. Finalize seu treinamento!", Dictionary<string, string> { { "Experiência", anosExperiencia.ToString() }, { "Data atual", DateTime.Today.ToShortTimeString() } });
+                this.AdicionarNotificacao("Você ainda é um padawan. Finalize seu treinamento!", Dictionary<string, string> { { "Experiência", anosExperiencia.ToString() }, { "Data atual", DateTime.Today.ToShortTimeString() } }, "NOTIFICACAO_001");
         }
     }
 }
@@ -125,7 +125,7 @@ Errado! Porque não, reusar essas validações comuns:
         // if (string.IsNullOrEmpty(nome))
         //     this.AdicionarNotificacao("Informe seu nome, guerreiro!");
         
-        this.NotificarSeNuloOuVazio(nome, "Informe seu nome, guerreiro!");
+        this.NotificarSeNuloOuVazio(nome, "Informe seu nome, guerreiro!", id: "NOTIFICACAO_021");
         ...
     }
 ```
@@ -133,10 +133,10 @@ No exemplo acima, caso o parâmetro *"nome"* **seja nulo ou vazio**, uma notific
 
 A classe **Noitificavel** utiliza [*extension methods*](https://docs.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/extension-methods), trazendo vários tipos de validações comumente utilizadas. Veja alguns exemplos:
 ```csharp
-this.NotificarSePossuirTamanhoSuperiorA("abc", 2, "A string 'abc' tem tamanho superior a 2.");
+this.NotificarSePossuirTamanhoSuperiorA("abc", 2, "A string 'abc' tem tamanho superior a 2.", id: "ERR0001");
 ```
 ```csharp
-this.NotificarSeEmailInvalido("email@invalido", "O e-mail é inválido.");
+this.NotificarSeEmailInvalido("email@invalido", "O e-mail é inválido.", id: "NT02");
 ```
 ```csharp
 this.NotificarSeMaiorOuIgualA(3, 2, "O valor 3 é maior ou igual ao valor 2.");

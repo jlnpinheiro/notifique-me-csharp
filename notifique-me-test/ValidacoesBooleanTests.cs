@@ -7,7 +7,7 @@ public class ValidacoesBooleanTests : Notificavel
     {
         var valor = true;
 
-        this.NotificarSeVerdadeiro(valor, "O valor é verdadeiro.");
+        this.NotificarSeVerdadeiro(valor, "O valor é verdadeiro.", id: "ERR001");
 
         Assert.That(Invalido);
     }
@@ -18,7 +18,7 @@ public class ValidacoesBooleanTests : Notificavel
     {
         var valor = false;
 
-        this.NotificarSeFalso(valor, "O valor é false.");
+        this.NotificarSeFalso(valor, "O valor é false.", id: "ERR002");
 
         Assert.That(Invalido);
     }

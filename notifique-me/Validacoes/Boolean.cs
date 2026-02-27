@@ -11,13 +11,14 @@ namespace JNogueira.NotifiqueMe
         /// <param name="valor">Valor booleano a ser verificado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static INotificavel NotificarSeVerdadeiro(this INotificavel notificavel, bool valor, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        /// <param name="id">Identificador da notificação.</param>
+        public static INotificavel NotificarSeVerdadeiro(this INotificavel notificavel, bool valor, string mensagem, Dictionary<string, string> informacoesAdicionais = null, string id = null)
         {
             if (notificavel == null)
                 return null;
 
             if (valor)
-                notificavel.AdicionarNotificacao(mensagem, informacoesAdicionais);
+                notificavel.AdicionarNotificacao(mensagem, informacoesAdicionais, id);
 
             return notificavel;
         }
@@ -29,13 +30,14 @@ namespace JNogueira.NotifiqueMe
         /// <param name="valor">Valor booleano a ser verificado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static INotificavel NotificarSeFalso(this INotificavel notificavel, bool valor, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        /// <param name="id">Identificador da notificação.</param>
+        public static INotificavel NotificarSeFalso(this INotificavel notificavel, bool valor, string mensagem, Dictionary<string, string> informacoesAdicionais = null, string id = null)
         {
             if (notificavel == null)
                 return null;
 
             if (!valor)
-                notificavel.AdicionarNotificacao(mensagem, informacoesAdicionais);
+                notificavel.AdicionarNotificacao(mensagem, informacoesAdicionais, id);
 
             return notificavel;
         }

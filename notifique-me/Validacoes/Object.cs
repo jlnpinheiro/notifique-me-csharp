@@ -11,13 +11,14 @@ namespace JNogueira.NotifiqueMe
         /// <param name="objeto">Objeto a ser verificado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static INotificavel NotificarSeNulo(this INotificavel notificavel, object objeto, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        /// <param name="id">Informações adicionais da notificação.</param>
+        public static INotificavel NotificarSeNulo(this INotificavel notificavel, object objeto, string mensagem, Dictionary<string, string> informacoesAdicionais = null, string id = null)
         {
             if (notificavel == null)
                 return null;
 
             if (objeto == null)
-                notificavel.AdicionarNotificacao(mensagem, informacoesAdicionais);
+                notificavel.AdicionarNotificacao(mensagem, informacoesAdicionais, id);
 
             return notificavel;
         }
@@ -29,13 +30,14 @@ namespace JNogueira.NotifiqueMe
         /// <param name="objeto">Objeto a ser verificado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static INotificavel NotificarSeNaoNulo(this INotificavel notificavel, object objeto, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        /// <param name="id">Informações adicionais da notificação.</param>
+        public static INotificavel NotificarSeNaoNulo(this INotificavel notificavel, object objeto, string mensagem, Dictionary<string, string> informacoesAdicionais = null, string id = null)
         {
             if (notificavel == null)
                 return null;
 
             if (objeto != null)
-                notificavel.AdicionarNotificacao(mensagem, informacoesAdicionais);
+                notificavel.AdicionarNotificacao(mensagem, informacoesAdicionais, id);
 
             return notificavel;
         }
@@ -48,13 +50,14 @@ namespace JNogueira.NotifiqueMe
         /// <param name="obj2">Objeto que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static INotificavel NotificarSeIguais(this INotificavel notificavel, object obj1, object obj2, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        /// <param name="id">Informações adicionais da notificação.</param>
+        public static INotificavel NotificarSeIguais(this INotificavel notificavel, object obj1, object obj2, string mensagem, Dictionary<string, string> informacoesAdicionais = null, string id = null)
         {
             if (notificavel == null)
                 return null;
 
             if (obj1.Equals(obj2))
-                notificavel.AdicionarNotificacao(mensagem, informacoesAdicionais);
+                notificavel.AdicionarNotificacao(mensagem, informacoesAdicionais, id);
 
             return notificavel;
         }
@@ -67,13 +70,14 @@ namespace JNogueira.NotifiqueMe
         /// <param name="obj2">Objeto que será comparado.</param>
         /// <param name="mensagem">Mensagem da notificação.</param>
         /// <param name="informacoesAdicionais">Informações adicionais da notificação.</param>
-        public static INotificavel NotificarSeDiferentes(this INotificavel notificavel, object obj1, object obj2, string mensagem, Dictionary<string, string> informacoesAdicionais = null)
+        /// <param name="id">Informações adicionais da notificação.</param>
+        public static INotificavel NotificarSeDiferentes(this INotificavel notificavel, object obj1, object obj2, string mensagem, Dictionary<string, string> informacoesAdicionais = null, string id = null)
         {
             if (notificavel == null)
                 return null;
 
             if (!obj1.Equals(obj2))
-                notificavel.AdicionarNotificacao(mensagem, informacoesAdicionais);
+                notificavel.AdicionarNotificacao(mensagem, informacoesAdicionais, id);
 
             return notificavel;
         }
